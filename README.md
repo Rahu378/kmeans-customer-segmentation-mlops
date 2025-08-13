@@ -39,28 +39,12 @@ This project implements customer segmentation using K-means clustering, orchestr
 flowchart LR
     A[Data Sources] --> B[Data Ingestion - Airflow]
     B --> C[Data Versioning - DVC]
-    C --> D[Data Preprocessing - src/preprocessing]
-    D --> E[Model Training - K-means | src/training]
+    C --> D[Data Preprocessing - src preprocessing]
+    D --> E[Model Training - K-means - src training]
     E --> F[Experiment Tracking - MLflow]
     F --> G[Hyperparameter Tuning]
     G --> H[Model Registry - MLflow]
-    H --> I[Deployment - Vertex AI & Flask API]
+    H --> I[Deployment - Vertex AI and Flask API]
     I --> J[Monitoring - Looker Dashboards]
     J --> B
 
-
-## 🏗 MLOps Pipeline Architecture
-
-```mermaid
-flowchart LR
-    A[Data Sources] --> B[Data Ingestion - Airflow]
-    B --> C[Data Versioning - DVC]
-    C --> D[Data Preprocessing - src/preprocessing]
-    D --> E[Model Training - K-means | src/training]
-    E --> F[Experiment Tracking - MLflow]
-    F --> G[Hyperparameter Tuning]
-    G --> H[Model Registry - MLflow]
-    H --> I[Deployment - Vertex AI & Flask API]
-    I --> J[Monitoring - Looker Dashboards]
-    J --> B
-```
